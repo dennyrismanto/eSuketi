@@ -1,0 +1,19 @@
+{
+    "contactInfo": {
+        "title": "Contact Information",
+        "address": {
+            "icon": "ion-android-map",
+            "location": "Stock Building, 125 Main Street 1st Lane, San Francisco, USA"
+        },
+        "telephone": {
+            "icon": "ion-ios-telephone-outline",
+            "no_1": "(001) 24568 365 987)",
+            "no_2": "(001) 65897 569 784)"
+        },
+        "mail": {
+            "icon": "ion-ios-email-outline",
+            "email": "infor@example.com",
+            "web": "example.com"
+        }
+    }
+}

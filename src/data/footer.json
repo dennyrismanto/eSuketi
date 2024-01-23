@@ -1,0 +1,66 @@
+{
+    "footerLogo": "assets/img/logo/logo-light.png",
+    "footerDesc": "Lorem ipsum dolor sit amet consect adipisici elit, sed do eiusmod tempor incididuk ut labore et dolore magna aliqua Ut enim 126",
+    "footerLinkTitleOne": "usefull link 01",
+    "navListOne": [
+        {
+            "navTitle": "Home",
+            "navUrl": "/" 
+        },
+        {
+            "navTitle": "Company News",
+            "navUrl": "/blog-left-sidebar" 
+        },
+        {
+            "navTitle": "Projects",
+            "navUrl": "/project" 
+        },
+        {
+            "navTitle": "Careers",
+            "navUrl": "/contact" 
+        },
+        {
+            "navTitle": "Contact Us",
+            "navUrl": "/contact" 
+        }
+    ],
+    "footerLinkTitleTwo": "usefull link 02",
+    "navListTwo": [
+        {
+            "navTitle": "Our Services",
+            "navUrl": "/service" 
+        },
+        {
+            "navTitle": "Showcase",
+            "navUrl": "/project" 
+        },
+        {
+            "navTitle": "Affliates",
+            "navUrl": "/" 
+        },
+        {
+            "navTitle": "Disclaimer",
+            "navUrl": "/" 
+        },
+        {
+            "navTitle": "Privacy Policy",
+            "navUrl": "/" 
+        }
+    ],
+    "footerContactWidget": {
+        "widgetTitle": "contact us",
+        "widgetDesc": "Your address goes here",
+        "contactInfo": [
+            {
+                "title": "<span>P:</span>99 55 66 88 526"
+            },
+            {
+                "title": "<span>F:</span>55 44 77 62"
+            },
+            {
+                "title": "<span>E:</span>cons@email.com"
+            }
+        ]
+    }
+
+}

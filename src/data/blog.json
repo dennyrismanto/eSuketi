@@ -1,0 +1,159 @@
+{
+    "sectionTitle": "Latest Blog",
+    "blogPosts": [
+        {
+            "image": "assets/img/blog/1.jpg",
+            "title": "Industry Ministry to Hike Elit",
+            "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe minus, illo error ratione",
+            "date": "April 12, 2020"
+        },
+        {
+            "image": "assets/img/blog/2.jpg",
+            "title": "Worker Safety: India Appeals",
+            "desc": "consectetur adipisicing Lorem ipsum dolor amet elit. Nemo exercitationem consequuntur",
+            "date": "March 18, 2020"
+        },
+        {
+            "image": "assets/img/blog/3.jpg",
+            "title": "Lorem ipsum dolor sit amet.",
+            "desc": "amet consectetur Lorem ipsum, dolor sit adipisicing elit. Saepe minus, illo error ratione",
+            "date": "January 10, 2020"
+        },
+        {
+            "image": "assets/img/blog/1.jpg",
+            "title": "Industry Ministry to Hike Elit",
+            "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe minus, illo error ratione",
+            "date": "April 12, 2020"
+        },
+        {
+            "image": "assets/img/blog/2.jpg",
+            "title": "Worker Safety: India Appeals",
+            "desc": "consectetur adipisicing Lorem ipsum dolor amet elit. Nemo exercitationem consequuntur",
+            "date": "March 18, 2020"
+        },
+        {
+            "image": "assets/img/blog/3.jpg",
+            "title": "Lorem ipsum dolor sit amet.",
+            "desc": "amet consectetur Lorem ipsum, dolor sit adipisicing elit. Saepe minus, illo error ratione",
+            "date": "January 10, 2020"
+        }
+    ],
+    "blogSidebarData": {
+        "searchTitle": "Search",
+        "CategoriesTitle": "Categories",
+        "categories": [
+            {
+                "title": "Renovation",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Architecture",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Concrete Supply",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Laminate Flooring",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Consulting",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Interior Design",
+                "link": "/blog-details"
+            },
+            {
+                "title": "Project Planning",
+                "link": "/blog-details"
+            }
+        ],
+        "popularPostTitle": "Popular Post",
+        "popularPost": [
+            {
+                "image": "assets/img/blog/sidebar-blog-1.jpg",
+                "title": "What are Groundworkers and what do they do?",
+                "date": "April 12, 2020"
+            },
+            {
+                "image": "assets/img/blog/sidebar-blog-2.jpg",
+                "title": "What's really delaying the £15.4bn mega-project",
+                "date": "April 18, 2020"
+            },
+            {
+                "image": "assets/img/blog/sidebar-blog-3.jpg",
+                "title": "How much space does a house wall take up in",
+                "date": "March 12, 2020"
+            }
+        ],
+        "tagTitle": "Popular Tags",
+        "tags": [
+            {
+                "name": "Renovation",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Interior",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Concrete",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Flooring",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Consulting",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Planning",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Architecture",
+                "link": "/blog-left-sidebar"
+            },
+            {
+                "name": "Industry",
+                "link": "/blog-left-sidebar"
+            }
+        ]
+    },
+    "blogDetails": {
+        "image": "assets/img/blog/blog-details-1.jpg",
+        "title": "What are Groundworkers and what do they do?",
+        "desc_para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eveniet reprehenderit voluptas delectus reiciendis pariatur, totam id quae tempore fugiat tenetur asperiores saepe velit nisi voluptates molestiae quia fugit laboriosam quidem, distinctio dolor consequatur repellendus debitis natus magni. Totam atque provident nulla quasi voluptatum nostrum officia rerum pariatur maxime sit.",
+        "desc_para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iure eveniet minima commodi consequuntur veritatis, officiis quibusdam molestias, nemo dolorum veniam quisquam pariatur facilis repudiandae eaque quas assumenda enim, unde placeat dolores id voluptatibus amet.",
+        "desc_para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam explicabo iusto suscipit dolore repellendus odit laborum, cupiditate unde nesciunt eveniet temporibus autem adipisci earum at error aspernatur neque minima doloribus?",
+        "desc_para4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptate repellat quam exercitationem excepturi enim et blanditiis amet minima itaque, doloribus cumque labore. Asperiores nemo odio sed molestias harum laborum quia enim, delectus repellendus consequuntur unde magnam, ipsam possimus vero, quam dolore adipisci. Rerum, vitae!",
+        "blockQuote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ad totam est optio mollitia dolores rem ducimus. Odio assumenda distinctio adipisci! Consequuntur excepturi eos nulla.",
+        "author": "Erik Jhonson",
+        "tags": [
+            {
+                "tagName": "Consulting",
+                "link": "/blog-details"
+            },
+            {
+                "tagName": "Planning",
+                "link": "/blog-details"
+            },
+            {
+                "tagName": "Renovation",
+                "link": "/blog-details"
+            }
+        ],
+        "metas": {
+            "author": "Admin",
+            "authorLink": "#",
+            "date": "April 12, 2020",
+            "comment": "03 Comment",
+            "allComment": "#"
+        }
+    }
+}

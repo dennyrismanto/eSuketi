@@ -1,0 +1,160 @@
+{
+    "id": 1,
+    "sectionTitle": "We are Best construction in the world",
+    "sectionSubTitle": "ABOUT US",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    "image": "assets/img/backgrounds/video-cta.jpg",
+    "aboutImage": "assets/img/backgrounds/about.png",
+    "youtubeLink": "https://www.youtube.com/watch?v=LTauBc7lDIg",
+
+    "aboutUs": {
+        "image": "assets/img/about/about-3.jpg",
+        "youtubeLink": "http://www.youtube.com/watch?v=LTauBc7lDIg",
+        "subTitle": "Welcome to Castro",
+        "title": "50+ Years of Experience in Industry",
+        "shortDesc": "We are ready to build your dream home Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, beatae.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam repudiandae odit dolorum quis laudantium impedit beatae perferendis natus, hic libero sed atque quibusdam possimus error, voluptate est molestiae doloremque necessitatibus illum rerum sunt! Ad sunt obcaecati voluptatem sint sequi quos, qui non deleniti a praesentium, sapiente accusantium odit."
+    },
+    
+    "policy": [
+        {
+            "icon": "assets/img/icons/feature-1.png",
+            "title": "Top Rated",
+            "body": "Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur."
+        },
+        {
+            "icon": "assets/img/icons/feature-2.png",
+            "title": "Best Quality",
+            "body": "Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur."
+        },
+        {
+            "icon": "assets/img/icons/feature-3.png",
+            "title": "Low Cost",
+            "body": "Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur."
+        }
+    ],
+    "experience": {
+        "image_1": "assets/img/about/about-1.jpg",
+        "image_2": "assets/img/about/about-2.jpg",
+        "title": "<span>50</span>Years of Experience",
+        "desc": "ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor ellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum atibus saepe eveniet ut et voluptates repudiandae sint et molestiae",
+        "desc2": "ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor ellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum atibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapie"
+    },
+    "team": {
+        "sectionTitle": "Our Team",
+        "teamMemberData": [
+            {
+                "image": "assets/img/team/team-1.jpg",
+                "name": "Jonathan Scott",
+                "designation": "CEO & Architech",
+                "email": "info@example.com",
+                "social": [
+                    {
+                        "icon": "fa fa-facebook",
+                        "addClass": "facebook",
+                        "link": "https://www.facebook.com"
+                    },
+                    {
+                        "icon": "fa fa-twitter",
+                        "addClass": "twitter",
+                        "link": "https://twitter.com"
+                    },
+                    {
+                        "icon": "fa fa-linkedin",
+                        "addClass": "linkedin",
+                        "link": "https://www.linkedin.com"
+                    },
+                    {
+                        "icon": "fa fa-google-plus",
+                        "addClass": "google",
+                        "link": "https://www.google.com"
+                    }
+                ]
+            },
+            {
+                "image": "assets/img/team/team-2.jpg",
+                "name": "Benjamin Austin",
+                "designation": "Chief Engineer",
+                "email": "info@example.com",
+                "social": [
+                    {
+                        "icon": "fa fa-facebook",
+                        "addClass": "facebook",
+                        "link": "https://www.facebook.com"
+                    },
+                    {
+                        "icon": "fa fa-twitter",
+                        "addClass": "twitter",
+                        "link": "https://twitter.com"
+                    },
+                    {
+                        "icon": "fa fa-linkedin",
+                        "addClass": "linkedin",
+                        "link": "https://www.linkedin.com"
+                    },
+                    {
+                        "icon": "fa fa-google-plus",
+                        "addClass": "google",
+                        "link": "https://www.google.com"
+                    }
+                ]
+            },
+            {
+                "image": "assets/img/team/team-3.jpg",
+                "name": "John Oliver",
+                "designation": "Project Manager",
+                "email": "info@example.com",
+                "social": [
+                    {
+                        "icon": "fa fa-facebook",
+                        "addClass": "facebook",
+                        "link": "https://www.facebook.com"
+                    },
+                    {
+                        "icon": "fa fa-twitter",
+                        "addClass": "twitter",
+                        "link": "https://twitter.com"
+                    },
+                    {
+                        "icon": "fa fa-linkedin",
+                        "addClass": "linkedin",
+                        "link": "https://www.linkedin.com"
+                    },
+                    {
+                        "icon": "fa fa-google-plus",
+                        "addClass": "google",
+                        "link": "https://www.google.com"
+                    }
+                ]
+            },
+            {
+                "image": "assets/img/team/team-4.jpg",
+                "name": "Philip Alvarez",
+                "designation": "Finanaces",
+                "email": "info@example.com",
+                "social": [
+                    {
+                        "icon": "fa fa-facebook",
+                        "addClass": "facebook",
+                        "link": "https://www.facebook.com"
+                    },
+                    {
+                        "icon": "fa fa-twitter",
+                        "addClass": "twitter",
+                        "link": "https://twitter.com"
+                    },
+                    {
+                        "icon": "fa fa-linkedin",
+                        "addClass": "linkedin",
+                        "link": "https://www.linkedin.com"
+                    },
+                    {
+                        "icon": "fa fa-google-plus",
+                        "addClass": "google",
+                        "link": "https://www.google.com"
+                    }
+                ]
+            }
+        ]
+    }
+}

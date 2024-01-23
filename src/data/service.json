@@ -1,0 +1,108 @@
+{
+    "serviceOne": {
+        "sectionTitle": "Our Services",
+        "serviceList": [
+            {
+                "image": "assets/img/service/service1.jpg",
+                "icon": "flaticon-002-welding",
+                "title": "Land Minning",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            },
+            {
+                "image": "assets/img/service/service2.jpg",
+                "icon": "flaticon-004-walkie-talkie",
+                "title": "Work Management",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            },
+            {
+                "image": "assets/img/service/service3.jpg",
+                "icon": "flaticon-015-cart",
+                "title": "Material Engineering",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            },
+            {
+                "image": "assets/img/service/service4.jpg",
+                "icon": "flaticon-010-tank-1",
+                "title": "Power and Energy",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            },
+            {
+                "image": "assets/img/service/service5.jpg",
+                "icon": "flaticon-002-welding",
+                "title": "Land Minning",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            },
+            {
+                "image": "assets/img/service/service6.jpg",
+                "icon": "flaticon-004-walkie-talkie",
+                "title": "Work Management",
+                "desc": "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor"
+            }
+        ]
+    },
+    "serviceDetailsSlider": [
+        {
+            "image": "assets/img/service/service-details-1.jpg" 
+        },
+        {
+            "image": "assets/img/service/service-details-2.jpg" 
+        }
+    ],
+    "serviceDetails": {
+        "title": "Construction",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt perspiciatis error id ipsa atque unde quis dolore nobis eum aperiam enim blanditiis pariatur inventore eius commodi consectetur ut. Totam, assumenda! Laboriosam possimus, corporis dicta!</br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquid quod, officiis unde nostrum itaque! Adipisci dolorum, ab dolor, exercitationem praesentium dolorem quo voluptatum itaque dignissimos, sit esse cupiditate. Doloremque rerum similique a nobis placeat in illum, quo quaerat, ut repellat, fuga itaque? Nihil mollitia nisi, nam, accusantium nemo consequuntur reiciendis autem dicta consequatur earum beatae dolor distinctio, debitis repudiandae?",
+        "serviceLists": [
+            {
+                "title": "Project Analysis",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?"
+            },
+            {
+                "title": "Project Costing",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?"
+            },
+            {
+                "title": "Project Planning",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?"
+            },
+            {
+                "title": "Project Strategy",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?"
+            }
+        ]
+    },
+    "serviceSidebar": {
+        "title": "Services",
+        "lists": [
+            {
+                "icon": "flaticon-015-cart",
+                "name": "Construction",
+                "url": "/service-details"
+            },
+            {
+                "icon": "flaticon-010-tank-1",
+                "name": "House Remodel",
+                "url": "/service-details"
+            },
+            {
+                "icon": "flaticon-002-welding",
+                "name": "Interior Design",
+                "url": "/service-details"
+            },
+            {
+                "icon": "flaticon-004-walkie-talkie",
+                "name": "Floors & Roofs",
+                "url": "/service-details"
+            },
+            {
+                "icon": "flaticon-042-monitor",
+                "name": "Plumbing",
+                "url": "/service-details"
+            },
+            {
+                "icon": "flaticon-050-boxes",
+                "name": "Electricity",
+                "url": "/service-details"
+            }
+        ]
+    }
+}

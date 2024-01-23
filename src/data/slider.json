@@ -1,0 +1,59 @@
+{
+    "heroOne": [
+        {
+            "title": "Build Your Dream With Passion",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+            "image": "assets/img/slider/slider3.jpg"
+        },
+        {
+            "title": "Build Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+            "image": "assets/img/slider/slider2.jpg"
+        },
+        {
+            "title": "Makes Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+            "image": "assets/img/slider/slider1.jpg"
+        }
+    ],
+    "heroTwo": [
+        {
+            "title": "Makes Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider3.jpg",
+            "addClass": "hero-slider__content--center"
+        },
+        {
+            "title": "Build Your Dream With Passion",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider2.jpg",
+            "addClass": "hero-slider__content--center"
+        },
+        {
+            "title": "Build Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider1.jpg",
+            "addClass": "hero-slider__content--center"
+        }
+    ],
+    "heroThree": [
+        {
+            "title": "Build Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider4.jpg",
+            "addClass": "hero-slider__content--center"
+        },
+        {
+            "title": "Build Your Dream With Passion",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider5.jpg",
+            "addClass": "hero-slider__content--center"
+        },
+        {
+            "title": "Makes Your Dream With Castro",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm",
+            "image": "assets/img/slider/slider1.jpg",
+            "addClass": "hero-slider__content--center"
+        }
+    ]
+}
