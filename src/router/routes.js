@@ -7,8 +7,15 @@ const routes = [
   //   ]
   // },
   {
-    path: "/cms/dashboard",
+    path: "/cms",
     component: () => import("layouts/MainLayout.vue"),
+    children: [
+      {
+        path: "dashboard",
+        name: "Dashboard",
+        component: () => import("pages/cms/DashboardPage.vue"),
+      },
+    ],
   },
   {
     path: "/",

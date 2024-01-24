@@ -56,17 +56,15 @@
                           />
                         </div>
 
-                        <q-row class="mb-3">
-                          <div sm="6" class="text-end" align="right">
-                            <q-btn
-                              outline
-                              color="primary"
-                              class="px-4 py-2"
-                              @click="login"
-                              >Log In</q-btn
-                            >
-                          </div>
-                        </q-row>
+                        <div class="text-end q-mt-md" align="right">
+                          <q-btn
+                            outline
+                            color="primary"
+                            class="px-4 py-2"
+                            @click="login"
+                            >Log In</q-btn
+                          >
+                        </div>
 
                         <div class="form-group mt-2 mb-0 row" align="right">
                           <q-col cols="12" class="mt-3">
