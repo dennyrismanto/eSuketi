@@ -47,17 +47,17 @@ export default defineComponent({
         case "Users":
           this.$router.push("/users");
           break;
-        case "Drivers":
-          this.$router.push("/drivers");
+        case "Kecamatan":
+          this.$router.push("/kecamatan");
           break;
-        case "Vehicles":
-          this.$router.push("/vehicles");
+        case "Kelurahan":
+          this.$router.push("/kelurahan");
           break;
-        case "Booking a car":
-          this.$router.push("/booking-car");
+        case "Kabupaten/Kota":
+          this.$router.push("/kabupaten-kota");
           break;
-        case "Schedules":
-          this.$router.push("/schedules");
+        case "Provinsi":
+          this.$router.push("/provinsi");
           break;
         case "Restore rejected":
           this.$router.push("/restore-rejected");

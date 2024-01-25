@@ -11,7 +11,9 @@
               style="width: 75px"
               @click="dashboard"
             />
-            <div class="cursor-pointer" @click="dashboard">CMS eSuketi</div>
+            <div class="cursor-pointer" @click="dashboard">
+              eSuketi Applications
+            </div>
           </div>
         </q-toolbar-title>
       </q-toolbar>
@@ -66,54 +68,54 @@
 
       <q-item
         clickable
-        v-if="auth.roles[0] === 'approver' || auth.roles[0] === 'superadmin'"
+        v-if="auth.roles[0] === 'superadmin'"
         @click="approver"
         active-class="active"
-        :active="this.$route.path === `/approval`"
+        :active="this.$route.path === `/dashboard`"
       >
         <q-item-section avatar>
           <q-icon name="assignment_turned_in" />
         </q-item-section>
-        <q-item-section>Approver Page</q-item-section>
+        <q-item-section>Dashboard</q-item-section>
       </q-item>
       <q-item
         clickable
-        v-if="auth.roles[0] === 'requestor'"
-        @click="bookingcar"
+        v-if="auth.roles[0] === 'superadmin'"
+        @click="approver"
         active-class="active"
-        :active="this.$route.path === `/booking-car`"
+        :active="this.$route.path === `/dashboard`"
       >
         <q-item-section avatar>
-          <q-icon name="directions_car" />
+          <q-icon name="assignment_turned_in" />
         </q-item-section>
-        <q-item-section>Booking a car</q-item-section>
+        <q-item-section>Pengajuan Berkas</q-item-section>
       </q-item>
       <q-item
         clickable
-        v-if="auth.roles[0] === 'requestor'"
-        @click="schedules"
+        v-if="auth.roles[0] === 'superadmin'"
+        @click="approver"
         active-class="active"
-        :active="this.$route.path === `/schedules`"
+        :active="this.$route.path === `/dashboard`"
       >
         <q-item-section avatar>
-          <q-icon name="today" />
+          <q-icon name="assignment_turned_in" />
         </q-item-section>
-        <q-item-section>Schedules</q-item-section>
-      </q-item>
-      <q-item
-        clickable
-        v-if="auth.roles[0] === 'requestor'"
-        @click="myschedules"
-        active-class="active"
-        :active="this.$route.path === `/my-schedules`"
-      >
-        <q-item-section avatar>
-          <q-icon name="schedule" />
-        </q-item-section>
-        <q-item-section>My Schedules</q-item-section>
+        <q-item-section>Status Pengajuan Berkas</q-item-section>
       </q-item>
 
       <Dropdown v-for="link in dropdownLinks" :key="link.id" v-bind="link" />
+      <q-item
+        clickable
+        v-if="auth.roles[0] === 'superadmin'"
+        @click="approver"
+        active-class="active"
+        :active="this.$route.path === `/configurations`"
+      >
+        <q-item-section avatar>
+          <q-icon name="assignment_turned_in" />
+        </q-item-section>
+        <q-item-section>Konfigurasi</q-item-section>
+      </q-item>
     </q-drawer>
 
     <q-page-container>
@@ -132,97 +134,46 @@ import { useQuasar } from "quasar";
 const dropdownList = [
   {
     id: 1,
-    icon: "loupe",
-    name: "Booking",
-    isDown: true,
-    status: ["approver", "admin", "superadmin"],
-    list: [
-      {
-        id: 1,
-        icon: "directions_car",
-        title: "Booking a car",
-        url_destination: "/booking-car",
-        status: ["approver", "admin", "superadmin"],
-      },
-      {
-        id: 2,
-        icon: "today",
-        title: "Schedules",
-        url_destination: "/schedules",
-        status: ["approver", "admin", "superadmin"],
-      },
-      {
-        id: 3,
-        icon: "schedule",
-        title: "My schedules",
-        url_destination: "/my-schedules",
-        status: ["approver", "admin", "superadmin"],
-      },
-      {
-        id: 4,
-        icon: "report",
-        title: "Driver daily report",
-        url_destination: "/driver-daily-report",
-        status: ["approver", "superadmin"],
-      },
-      {
-        id: 5,
-        icon: "restore_from_trash",
-        title: "Restore rejected",
-        url_destination: "/restore-rejected",
-        status: ["approver", "superadmin"],
-      },
-      {
-        id: 6,
-        icon: "restore",
-        title: "Restore canceled",
-        url_destination: "/restore-canceled",
-        status: ["approver", "superadmin"],
-      },
-      // {
-      //   id: 7,
-      //   icon: "email",
-      //   title: "Send email to GA",
-      //   url_destination: "/send-email-to-ga",
-      //   status: ["requestor", "admin", "superadmin"],
-      // },
-    ],
-  },
-  {
-    id: 2,
     icon: "assessment",
-    name: "Master",
+    name: "Master Data",
     isDown: false,
     status: ["admin", "superadmin"],
     list: [
       {
         id: 1,
-        icon: "directions_car",
-        title: "Vehicles",
-        url_destination: "/vehicles",
+        icon: "map",
+        title: "Kelurahan",
+        url_destination: "/kelurahan",
         status: ["admin", "superadmin"],
       },
       {
         id: 2,
-        icon: "mdi-account-tie-hat",
-        title: "Drivers",
-        url_destination: "/drivers",
+        icon: "map",
+        title: "Kecamatan",
+        url_destination: "/kecamatan",
         status: ["admin", "superadmin"],
       },
       {
         id: 3,
+        icon: "map",
+        title: "Kabupaten/Kota",
+        url_destination: "/drivers",
+        status: ["admin", "superadmin"],
+      },
+      {
+        id: 4,
+        icon: "map",
+        title: "Provinsi",
+        url_destination: "/drivers",
+        status: ["admin", "superadmin"],
+      },
+      {
+        id: 5,
         icon: "person",
         title: "Users",
         url_destination: "/users",
         status: ["admin", "superadmin"],
       },
-      // {
-      //   id: 4,
-      //   icon: "settings",
-      //   title: "Configs",
-      //   url_destination: "/configs",
-      //   status: ["admin", "superadmin"],
-      // },
     ],
   },
 ];
@@ -241,7 +192,7 @@ export default defineComponent({
     //get condition if auth user empty route to login
     this.currentURL = this.$route.path;
     if (this.currentURL === "/") {
-      this.$router.push("/booking-car");
+      this.$router.push("/dashboard");
     }
   },
 
@@ -270,7 +221,7 @@ export default defineComponent({
       });
     };
     const dashboard = () => {
-      router.push("/booking-car");
+      router.push("/dashboard");
     };
     const approver = () => {
       router.push("/approval");
@@ -285,9 +236,9 @@ export default defineComponent({
       router.push("/schedules");
     };
     onMounted(() => {
-      if (auth.user === null) {
-        router.push("/login");
-      }
+      // if (auth.user === null) {
+      //   router.push("/login");
+      // }
       name.value = auth.user.name;
       splitName.value = name.value.split(" ");
       initialName.value =

@@ -129,7 +129,7 @@ export default {
     };
     const login = () => {
       auth.login(res.data.user, res.data.roles, res.data.token);
-      router.push("/cms/dashboard");
+      router.push("/dashboard");
     };
     return {
       login,
