@@ -69,7 +69,7 @@
       <q-item
         clickable
         v-if="auth.roles[0] === 'superadmin'"
-        @click="approver"
+        @click="dashboard"
         active-class="active"
         :active="this.$route.path === `/dashboard`"
       >
@@ -81,9 +81,9 @@
       <q-item
         clickable
         v-if="auth.roles[0] === 'superadmin'"
-        @click="approver"
+        @click="submissionOfDocuments"
         active-class="active"
-        :active="this.$route.path === `/dashboard`"
+        :active="this.$route.path === `/submission-of-documents`"
       >
         <q-item-section avatar>
           <q-icon name="assignment_turned_in" />
@@ -93,9 +93,9 @@
       <q-item
         clickable
         v-if="auth.roles[0] === 'superadmin'"
-        @click="approver"
+        @click="statusSubmissionOfDocuments"
         active-class="active"
-        :active="this.$route.path === `/dashboard`"
+        :active="this.$route.path === `/status-submission-of-documents`"
       >
         <q-item-section avatar>
           <q-icon name="assignment_turned_in" />
@@ -107,7 +107,7 @@
       <q-item
         clickable
         v-if="auth.roles[0] === 'superadmin'"
-        @click="approver"
+        @click="configurations"
         active-class="active"
         :active="this.$route.path === `/configurations`"
       >
@@ -223,18 +223,16 @@ export default defineComponent({
     const dashboard = () => {
       router.push("/dashboard");
     };
-    const approver = () => {
-      router.push("/approval");
+    const submissionOfDocuments = () => {
+      router.push("/submission-of-documents");
     };
-    const bookingcar = () => {
-      router.push("/booking-car");
+    const statusSubmissionOfDocuments = () => {
+      router.push("/status-submission-of-documents");
     };
-    const myschedules = () => {
-      router.push("/my-schedules");
+    const configurations = () => {
+      router.push("/configurations");
     };
-    const schedules = () => {
-      router.push("/schedules");
-    };
+
     onMounted(() => {
       // if (auth.user === null) {
       //   router.push("/login");
@@ -254,11 +252,10 @@ export default defineComponent({
       name,
       splitName,
       initialName,
-      approver,
-      bookingcar,
-      myschedules,
-      schedules,
       dashboard,
+      submissionOfDocuments,
+      statusSubmissionOfDocuments,
+      configurations,
 
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
