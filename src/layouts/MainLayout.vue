@@ -74,7 +74,7 @@
         :active="this.$route.path === `/dashboard`"
       >
         <q-item-section avatar>
-          <q-icon name="assignment_turned_in" />
+          <q-icon name="fa-solid fa-house" />
         </q-item-section>
         <q-item-section>Dashboard</q-item-section>
       </q-item>
@@ -86,7 +86,7 @@
         :active="this.$route.path === `/submission-of-documents`"
       >
         <q-item-section avatar>
-          <q-icon name="assignment_turned_in" />
+          <q-icon name="fa-solid fa-file-circle-plus" />
         </q-item-section>
         <q-item-section>Pengajuan Berkas</q-item-section>
       </q-item>
@@ -98,7 +98,7 @@
         :active="this.$route.path === `/status-submission-of-documents`"
       >
         <q-item-section avatar>
-          <q-icon name="assignment_turned_in" />
+          <q-icon name="pending_actions" />
         </q-item-section>
         <q-item-section>Status Pengajuan Berkas</q-item-section>
       </q-item>
@@ -112,7 +112,7 @@
         :active="this.$route.path === `/configurations`"
       >
         <q-item-section avatar>
-          <q-icon name="assignment_turned_in" />
+          <q-icon name="settings" />
         </q-item-section>
         <q-item-section>Konfigurasi</q-item-section>
       </q-item>
@@ -141,34 +141,6 @@ const dropdownList = [
     list: [
       {
         id: 1,
-        icon: "map",
-        title: "Kelurahan",
-        url_destination: "/kelurahan",
-        status: ["admin", "superadmin"],
-      },
-      {
-        id: 2,
-        icon: "map",
-        title: "Kecamatan",
-        url_destination: "/kecamatan",
-        status: ["admin", "superadmin"],
-      },
-      {
-        id: 3,
-        icon: "map",
-        title: "Kabupaten/Kota",
-        url_destination: "/drivers",
-        status: ["admin", "superadmin"],
-      },
-      {
-        id: 4,
-        icon: "map",
-        title: "Provinsi",
-        url_destination: "/drivers",
-        status: ["admin", "superadmin"],
-      },
-      {
-        id: 5,
         icon: "person",
         title: "Users",
         url_destination: "/users",

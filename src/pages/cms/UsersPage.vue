@@ -13,8 +13,8 @@
         @request="onRequest"
       >
         <template v-slot:top-left>
-          <q-icon name="people" size="2em" />
-          Users
+          <q-icon class="mobile-hide" name="people" size="2em" />
+          <span class="mobile-hide">Users</span>
         </template>
         <template v-slot:top-right>
           <div
@@ -530,12 +530,12 @@
           </q-card-section>
         </q-card>
       </q-dialog>
-      <q-dialog v-model="detail">
+      <!-- <q-dialog v-model="detail">
         <users-detail :id="id" />
       </q-dialog>
       <q-dialog v-model="remove" @hide="refresh">
         <dialog-delete :id="id" :type="type" />
-      </q-dialog>
+      </q-dialog> -->
     </div>
   </q-page>
 </template>
@@ -549,19 +549,26 @@ import {
   watchEffect,
 } from "vue";
 import { api } from "boot/axios";
-import UsersDetail from "../components/UsersDetail.vue";
-import DialogDelete from "../components/DialogDelete.vue";
+// import UsersDetail from "../components/UsersDetail.vue";
+// import DialogDelete from "../components/DialogDelete.vue";
 import { useQuasar } from "quasar";
 import { useAuthStore } from "src/stores/auth";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "UsersPage",
-  components: { UsersDetail, DialogDelete },
+  // components: { UsersDetail, DialogDelete },
 
   setup() {
     const auth = useAuthStore();
-    const rows = ref([]);
+    const rows = ref([
+      {
+        id: 1,
+        name: "john doe",
+        email: "john.doe@mail.com",
+        roles: ["superadmin"],
+      },
+    ]);
     const loading = ref(false);
     const id = ref("");
     const dialog = ref(false);
@@ -600,12 +607,6 @@ export default defineComponent({
       email: "",
       address: "",
       hp1: "",
-      hp2: "",
-      division: "",
-      access: "",
-      level: "",
-      company_id: "",
-      is_import: 0,
       role: "",
     });
     const save = () => {
@@ -628,10 +629,6 @@ export default defineComponent({
                 role: "",
                 address: "",
                 hp1: null,
-                hp2: null,
-                company_id: "",
-                division: "",
-                level: "",
               };
             } else {
               alert(res.data.message);
@@ -645,12 +642,6 @@ export default defineComponent({
               errorsMessage.value.email = err.response.data.errors.email;
               errorsMessage.value.address = err.response.data.errors.address;
               errorsMessage.value.hp1 = err.response.data.errors.hp1;
-              errorsMessage.value.hp2 = err.response.data.errors.hp2;
-              errorsMessage.value.division = err.response.data.errors.division;
-              errorsMessage.value.access = err.response.data.errors.access;
-              errorsMessage.value.level = err.response.data.errors.level;
-              errorsMessage.value.company_id =
-                err.response.data.errors.company_id;
               errorsMessage.value.role = err.response.data.errors.role;
             }
           });
@@ -661,11 +652,6 @@ export default defineComponent({
       email: computed(() => errorsMessage.value.email == null),
       address: computed(() => errorsMessage.value.address == null),
       hp1: computed(() => errorsMessage.value.hp1 == null),
-      hp2: computed(() => errorsMessage.value.hp2 == null),
-      division: computed(() => errorsMessage.value.division == null),
-      access: computed(() => errorsMessage.value.access == null),
-      level: computed(() => errorsMessage.value.level == null),
-      company_id: computed(() => errorsMessage.value.company_id == null),
       role: computed(() => errorsMessage.value.role == null),
     });
     const errorsMessage = ref({
@@ -673,11 +659,6 @@ export default defineComponent({
       email: null,
       address: null,
       hp1: null,
-      hp2: null,
-      division: null,
-      access: null,
-      level: null,
-      company_id: null,
       role: null,
     });
     const refreshErrorMessage = (props) => {
@@ -697,28 +678,11 @@ export default defineComponent({
         case "hp1":
           errorsMessage.value.hp1 = null;
           break;
-        case "hp2":
-          errorsMessage.value.hp2 = null;
-          break;
-        case "level":
-          errorsMessage.value.level = null;
-          break;
-        case "company_id":
-          errorsMessage.value.company_id = null;
-          break;
-        case "division":
-          errorsMessage.value.division = null;
-          break;
         default:
           errorsMessage.value.name = null;
           errorsMessage.value.email = null;
           errorsMessage.value.address = null;
           errorsMessage.value.hp1 = null;
-          errorsMessage.value.hp2 = null;
-          errorsMessage.value.division = null;
-          errorsMessage.value.access = null;
-          errorsMessage.value.level = null;
-          errorsMessage.value.company_id = null;
           errorsMessage.value.role = null;
           break;
       }
@@ -739,21 +703,6 @@ export default defineComponent({
         field: "email",
         sortable: true,
       },
-      {
-        name: "division",
-        align: "left",
-        label: "Division",
-        field: "division",
-        sortable: true,
-      },
-
-      {
-        name: "level",
-        align: "left",
-        label: "Level",
-        field: "level",
-        sortable: true,
-      },
 
       {
         name: "action",
@@ -765,49 +714,49 @@ export default defineComponent({
     ];
     const onRequest = (config) => {
       const { page, rowsPerPage, sortBy, descending } = config.pagination;
-      loading.value = true;
-      if (auth.token) {
-        api
-          .get("/api/users", {
-            headers: {
-              Authorization: `Bearer ${auth.token}`,
-            },
-            params: {
-              page,
-              limit: rowsPerPage,
-              sort: sortBy,
-              order: descending ? "desc" : "asc",
-              filter: filter.value,
-              with: "roles",
-            },
-          })
-          .then((res) => {
-            if (filter.value.search) {
-              watchEffect(() => {
-                pagination.value.rowsNumber = res.data.data.total;
-              });
-            } else {
-              watchEffect(() => {
-                pagination.value.rowsNumber = res.data.data.total;
-              });
-            }
+      // loading.value = true;
+      // if (auth.token) {
+      //   api
+      //     .get("/api/users", {
+      //       headers: {
+      //         Authorization: `Bearer ${auth.token}`,
+      //       },
+      //       params: {
+      //         page,
+      //         limit: rowsPerPage,
+      //         sort: sortBy,
+      //         order: descending ? "desc" : "asc",
+      //         filter: filter.value,
+      //         with: "roles",
+      //       },
+      //     })
+      //     .then((res) => {
+      //       if (filter.value.search) {
+      //         watchEffect(() => {
+      //           pagination.value.rowsNumber = res.data.data.total;
+      //         });
+      //       } else {
+      //         watchEffect(() => {
+      //           pagination.value.rowsNumber = res.data.data.total;
+      //         });
+      //       }
 
-            rows.value.splice(0, rows.value.length, ...res.data.data.data);
-            // setiap roles.value berisi ['admin', 'requestor']
-            // maka akan di map menjadi ['Admin', 'Requestor']
-            rows.value = rows.value.map((item) => {
-              item.roles = item.roles.map((role) => {
-                return role.name
-                  .split("_")
-                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(" ");
-              });
-              return item;
-            });
-            pagination.value = config.pagination;
-            loading.value = false;
-          });
-      }
+      //       rows.value.splice(0, rows.value.length, ...res.data.data.data);
+      //       // setiap roles.value berisi ['admin', 'requestor']
+      //       // maka akan di map menjadi ['Admin', 'Requestor']
+      //       rows.value = rows.value.map((item) => {
+      //         item.roles = item.roles.map((role) => {
+      //           return role.name
+      //             .split("_")
+      //             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      //             .join(" ");
+      //         });
+      //         return item;
+      //       });
+      //       pagination.value = config.pagination;
+      //       loading.value = false;
+      //     });
+      // }
     };
     const optionSelectCompanies = () => {
       if (auth.token) {
@@ -844,24 +793,24 @@ export default defineComponent({
           router.push({ name: "ErrorNotFound" });
         }
       }
-      if (
-        auth.user.company_id == null ||
-        auth.user.division == "" ||
-        auth.user.division == null
-      ) {
-        //buatkan q dialog untuk mengisi company dan division
-        $q.dialog({
-          title: "Update Profile",
-          message: "Please complete your profile",
-          persistent: true,
-          ok: {
-            label: "Complete Profile",
-            color: "primary",
-          },
-        }).onOk(() => {
-          router.push("/change-profile");
-        });
-      }
+      // if (
+      //   auth.user.company_id == null ||
+      //   auth.user.division == "" ||
+      //   auth.user.division == null
+      // ) {
+      //   //buatkan q dialog untuk mengisi company dan division
+      //   $q.dialog({
+      //     title: "Update Profile",
+      //     message: "Please complete your profile",
+      //     persistent: true,
+      //     ok: {
+      //       label: "Complete Profile",
+      //       color: "primary",
+      //     },
+      //   }).onOk(() => {
+      //     router.push("/change-profile");
+      //   });
+      // }
     });
     const showUpdate = (row) => {
       dialogUpdate.value = true;

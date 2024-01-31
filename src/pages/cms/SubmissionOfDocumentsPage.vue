@@ -2,7 +2,7 @@
   <q-page>
     <div class="row q-col-gutter-md">
       <div class="col-md-6 col-xs-12">
-        <div class="q-gutter-md">
+        <div class="q-gutter-md q-mt-md">
           <q-card flat>
             <q-card-section class="bg-primary">
               <div class="text-h6 text-white">
@@ -182,7 +182,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
-        <div class="q-gutter-md">
+        <div class="q-gutter-md q-mt-md q-mx-sm">
           <q-table
             title="Submission of Documents"
             :rows="rows"

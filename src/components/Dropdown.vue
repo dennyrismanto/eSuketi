@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pt-md">
+  <div>
     <q-expansion-item
       style="min-width: 100%"
       split
