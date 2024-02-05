@@ -18,7 +18,7 @@
                     <div class="text-center mt-4">
                       <router-link to="/">
                         <img
-                          src="src/assets/images/logo_bekasi.png"
+                          src="../assets/images/logo_bekasi.png"
                           width="100px"
                           alt="logo"
                         />

@@ -14,7 +14,7 @@
       >
         <template v-slot:top-left>
           <q-icon class="mobile-hide" name="pending_actions" size="2em" />
-          <span class="mobile-hide">Pengecekan Status Dokumen</span>
+          <span class="mobile-hide">Status Pengajuan Dokumen</span>
         </template>
         <template v-slot:top-right>
           <div
@@ -73,15 +73,14 @@
             {{ props.col.label }}
           </q-th>
         </template>
-        <template v-slot:body-cell-name="props">
+        <template v-slot:body-cell-status="props">
           <q-td>
-            <q-item-label>{{
-              props.row.name ? props.row.name : "-"
-            }}</q-item-label>
-
-            <template v-for="row in props.row.roles" :key="row">
-              <q-item-label caption>{{ row }}</q-item-label>
-            </template>
+            <q-chip
+              :color="props.row.status == 'Done' ? 'green' : 'orange'"
+              :text-color="props.row.status == 'Done' ? 'white' : 'black'"
+            >
+              {{ props.row.status }}
+            </q-chip>
           </q-td>
         </template>
         <template v-slot:body-cell-action="props">
@@ -370,9 +369,21 @@ export default defineComponent({
     const rows = ref([
       {
         id: 1,
-        name: "john doe",
-        email: "john.doe@mail.com",
-        roles: ["superadmin"],
+        name: "John Doe",
+        age: 30,
+        no_ktp: "123456789",
+        religion: "Christian",
+        gender: "Male",
+        status: "Done",
+      },
+      {
+        id: 2,
+        name: "Jane Doe",
+        age: 25,
+        no_ktp: "987654321",
+        religion: "Muslim",
+        gender: "Female",
+        status: "Process",
       },
     ]);
     const loading = ref(false);
@@ -494,20 +505,27 @@ export default defineComponent({
       }
     };
     const columns = [
+      { name: "name", label: "Name", align: "left", field: "name" },
+      { name: "age", label: "Age", align: "left", field: "age" },
       {
-        name: "name",
-        required: true,
-        label: "Full Name",
+        name: "no_ktp",
+        label: "ID Card Number",
         align: "left",
-        field: "name",
-        sortable: true,
+        field: "no_ktp",
       },
       {
-        name: "email",
+        name: "religion",
+        label: "Religion",
         align: "left",
-        label: "Email",
-        field: "email",
-        sortable: true,
+        field: "religion",
+      },
+      { name: "gender", label: "Gender", align: "left", field: "gender" },
+      //bikin kolom status
+      {
+        name: "status",
+        align: "left",
+        label: "Status",
+        field: "Status",
       },
 
       {
