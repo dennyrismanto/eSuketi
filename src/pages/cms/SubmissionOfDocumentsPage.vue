@@ -6,8 +6,11 @@
           <q-card flat>
             <q-card-section class="bg-primary">
               <div class="text-h6 text-white">
-                <q-icon name="users" class="text-white q-mr-sm" />
-                SubmissionOfDocumentsPage
+                <q-icon
+                  name="fa-solid fa-file-circle-plus"
+                  class="text-white q-mr-sm"
+                />
+                Pengajuan dokumen
               </div>
             </q-card-section>
             <q-separator />
@@ -22,7 +25,7 @@
                   @update:model-value="refreshErrorMessage('name')"
                 >
                   <template v-slot:prepend>
-                    <q-icon name="place" />
+                    <q-icon name="badge" />
                   </template>
                   <template v-slot:error>
                     <div
@@ -40,7 +43,7 @@
                   label="Umur *"
                 >
                   <template v-slot:prepend>
-                    <q-icon name="description" />
+                    <q-icon name="people" />
                   </template>
                 </q-input>
                 <q-input
@@ -52,7 +55,7 @@
                   @update:model-value="refreshErrorMessage('no_ktp')"
                 >
                   <template v-slot:prepend>
-                    <q-icon name="people" />
+                    <q-icon name="fa-solid fa-id-card" />
                   </template>
                   <template v-slot:error>
                     <div
@@ -72,7 +75,7 @@
                   @update:model-value="refreshErrorMessage('religion')"
                 >
                   <template v-slot:prepend>
-                    <q-icon name="email" />
+                    <q-icon name="fa-solid fa-hands-praying" />
                   </template>
                   <template v-slot:error>
                     <div
@@ -91,7 +94,7 @@
                   autogrow
                 >
                   <template v-slot:prepend>
-                    <q-icon name="note" />
+                    <q-icon name="fa-solid fa-briefcase" />
                   </template>
                 </q-input>
 
@@ -105,7 +108,7 @@
                   @update:model-value="refreshErrorMessage('gender')"
                 >
                   <template v-slot:prepend>
-                    <q-icon name="person" />
+                    <q-icon name="fa-solid fa-venus-mars" />
                   </template>
                   <template v-slot:error>
                     <div
@@ -184,7 +187,7 @@
       <div class="col-md-6 col-xs-12">
         <div class="q-gutter-md q-mt-md q-mx-sm">
           <q-table
-            title="Submission of Documents"
+            title="Status pengajuan dokumen"
             :rows="rows"
             :columns="columns"
             row-key="id"
