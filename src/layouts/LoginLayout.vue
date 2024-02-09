@@ -15,7 +15,7 @@
               <div class="account-box">
                 <div class="card-box shadow-none p-4">
                   <div class="p-2">
-                    <div class="text-center mt-4">
+                    <div class="text-center q-mt-md">
                       <router-link to="/">
                         <img
                           src="../assets/images/logo_bekasi.png"
@@ -26,12 +26,12 @@
                     </div>
 
                     <h4 class="font-size-18 mt-5 text-center">
-                      Welcome Back !
+                      SEKERTARIAT RW 011 DUREN JAYA
                     </h4>
-                    <p class="text-muted text-center">
+                    <!-- <p class="text-muted text-center">
                       Sign in to continue to eSuketi (Surat Keterangan Tanda
                       Bukti).
-                    </p>
+                    </p> -->
                     <div class="container">
                       <q-form class="form" action="/cms/dashboard">
                         <div class="mb-3">
@@ -67,11 +67,11 @@
                         </div>
 
                         <div class="form-group mt-2 mb-0 row" align="right">
-                          <q-col cols="12" class="mt-3">
+                          <div cols="12" class="mt-3">
                             <router-link to="/pages/recoverpwd-2">
                               <i class="mdi mdi-lock"></i> Forgot your password?
                             </router-link>
-                          </q-col>
+                          </div>
                         </div>
                       </q-form>
                     </div>
